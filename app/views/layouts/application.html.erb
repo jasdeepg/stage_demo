@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A98lumens</title>
+  <%= javascript_include_tag "jquery-1.8.1.js" %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+  <%= javascript_include_tag "flot/jquery.flot.js" %>
+  <%= javascript_include_tag "rails.js" %>
+  <%= javascript_include_tag "flot-test.js" %>
+  <%= javascript_include_tag "updateHTML.js" %>
+  <%= javascript_include_tag "flot/jquery.flot.time.js" %>
+  <%= javascript_include_tag "flot/jquery.flot.resize.js" %>
+  <%= javascript_include_tag "flot/jquery.flot.stack.js" %>
+  <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tooltip.js"></script>
+  <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+</head>
+<body>
+  <section id="header">
+    <%= render 'layouts/header' %>
+  </section>
+  <hr>
+  <section id="content">
+    <div class="container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+          </div>
+
+          <br>
+          
+      <%= render 'layouts/footer' %>
+  </section>
+    <script type="text/javascript">
+      <% if alert.nil? %>
+        $(".alert").hide()
+      <% else %>
+        $(".alert").show()
+      <% end %>
+    </script>
+</body>
+</html>

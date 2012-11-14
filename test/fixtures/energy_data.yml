@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: energy_data
+#
+#  id         :integer          not null, primary key
+#  month      :integer
+#  day        :integer
+#  year       :integer
+#  hour       :integer
+#  power      :float
+#  user_id    :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  month: 1
+  day: 1
+  year: 1
+  hour: 1
+  power: 1.5
+  user_id: 1
+
+two:
+  month: 1
+  day: 1
+  year: 1
+  hour: 1
+  power: 1.5
+  user_id: 1
