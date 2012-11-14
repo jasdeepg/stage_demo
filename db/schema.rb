@@ -90,6 +90,7 @@ ActiveRecord::Schema.define(:version => 20121111215232) do
     t.boolean  "superadmin",             :default => false, :null => false
     t.string   "Location"
     t.string   "panel_zip"
+    t.integer  "state_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

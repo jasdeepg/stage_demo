@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    redirect_to "http://www.98lumens.com"
   end
 
   def about

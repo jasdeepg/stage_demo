@@ -13,20 +13,31 @@
         <p class="lead" id="name-text">
           <h4><%= @user.name %></h4>
         </p>
+        <% if !@user.energy_data.empty? %>
         <p style="font-size:16px">
          <!-- Joined: <%= @user.created_at.month %>-<%= @user.created_at.day %>-<%= @user.created_at.year %>
           <br>-->
           Location of solar panel: <b><%= @location %></b>
         </p>
+        <% end %>
     </div>
 
+    <% if !@user.energy_data.empty? %>
     <div id="weather">
       <%= @location %>
       <%= @weather %>
     </div>
+    <% end %>
+
+    <% if @user.energy_data.empty? %>
+      <p style="font-size:16px">
+        <%= link_to "Learn how you can go solar and activate this dashboard", 'http://www.98lumens.com/consult.html', :class=>"btn btn-success btn-large dash-btn" %>
+      </p>
+    <% end %>
 
 </div>
 
+<% if !@user.energy_data.empty? %>
   <!-- chart and highlight row -->
 <div class="row-fluid">
         <div class="graph-title"><p class="lead">Clean energy produced by your solar panel (kWh)</p></div>
@@ -74,6 +85,8 @@
           </tr>
         </table> -->
   </div>
+
+<% end %>
 
 <!-- Table for all metrics
 

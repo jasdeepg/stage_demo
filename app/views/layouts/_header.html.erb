@@ -13,7 +13,7 @@
     <div class="row"> 
       
       <!--logo starts-->
-      <div class="span4 logo"><a href="<%= root_path %>"><%= image_tag("98lumens logo.png", :size=>"148x80") %></a></div>
+      <div class="span4 logo"><a href="http://www.98lumens.com"><%= image_tag("98lumens logo.png", :size=>"148x80") %></a></div>
       <!--logo ends-->
       
       <div class="span8 clearfix"> 
@@ -29,16 +29,16 @@
         <!--menu starts-->
         <div id="smoothmenu" class="ddsmoothmenu">
           <ul>
-            <li><a href="<%= root_path %>" class="selected">Home</a></li>
-            <li><a href="learn.html">Learn</a>
+            <li><a href="http://www.98lumens.com" class="selected">Home</a></li>
+            <li><a href="http://www.98lumens.com/learn.html">Learn</a>
               <ul>
                 <li><a href="learn.html">98lumens Solar Process</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="http://www.98lumens.com/faqs.html">FAQs</a></li>
               </ul>
             </li>
-            <li><a href="benefits.html">Benefits</a></li>
- 			<li><a href="about.html">About</a> </li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="http://www.98lumens.com/benefits.html">Benefits</a></li>
+ 			<li><a href="http://www.98lumens.com/about.html">About</a> </li>
+            <li><a href="http://www.98lumens.com/contact.html">Contact</a></li>
             <% if signed_in? %>
             	<li><%= link_to("Logout", destroy_user_session_path, :method => :delete) %></li>
             <% else %>
